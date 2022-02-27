@@ -1,4 +1,4 @@
-package org.example
+package org.fullstack101
 
 class AnagramDetector {
     fun countAnagrams(words: List<String>): Int {

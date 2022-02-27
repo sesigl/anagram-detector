@@ -1,4 +1,4 @@
-package org.example
+package org.fullstack101
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
@@ -127,5 +127,11 @@ class AnagramDetectorTest {
         assertThat(anagrams.size).assertThat(20683)
     }
 
-    private fun getFileFromClassPath(path: String) = object {}.javaClass.getResource(path).file
+    private fun getFileFromClassPath(path: String): String {
+        val resource = object {}.javaClass.getResource(path)
+
+        checkNotNull(resource)
+
+        return resource.file
+    }
 }
